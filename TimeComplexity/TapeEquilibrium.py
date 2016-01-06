@@ -46,6 +46,14 @@ class Tests(unittest.TestCase):
         """Array with five 0's"""
         self.assertEqual(0, solution([0,0,0,0,0]))
 
+    def test_empty(self):
+        """Empty array"""
+        self.assertEqual(None, solution([]))
+
+    def test_one_element(self):
+        """Array with single element"""
+        self.assertEqual(69, solution([69]))
+
 
 if __name__ == '__main__':
     unittest.main()
