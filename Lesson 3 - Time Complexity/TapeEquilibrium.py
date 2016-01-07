@@ -8,8 +8,8 @@ def solution(A):
     # do verifications
     if not size:
         return None
-    if size < 2:
-        return A[0]
+    if size == 1:
+        return abs(A[0])
 
     # calc result for P=1
     P = 1
