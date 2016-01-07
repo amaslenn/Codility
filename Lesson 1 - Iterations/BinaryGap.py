@@ -7,11 +7,11 @@ def solution(N):
     number = str(bin(N))
 
     maximum, count_of_zeros = 0, 0
+
     # for all digits skipping 0b
     for i in range(2, len(number)):
         # get bit
         b = int(number[i])
-
 
         if b == 0x1:
             if count_of_zeros != 0:
@@ -40,6 +40,10 @@ class Tests(unittest.TestCase):
     def test_from_task_15(self):
         """Sample from task description N=15"""
         self.assertEqual(0, solution(15))
+
+    def test_zero(self):
+        """Check with N=0"""
+        self.assertEqual(0, solution(0))
 
     def test_time(self):
         """N = 2147483647, check time limit (??? sec)"""
