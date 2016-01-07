@@ -24,7 +24,7 @@ def solution(N):
     return maximum
 
 class Tests(unittest.TestCase):
-    """Tests for TapeEquilibrium solution"""
+    """Tests for BinaryGap solution"""
     def test_from_task_1041(self):
         """Sample from task description N=1041"""
         self.assertEqual(5, solution(1041))
