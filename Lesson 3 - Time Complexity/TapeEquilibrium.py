@@ -14,11 +14,11 @@ def solution(A):
     # calc result for P=1
     P = 1
     sum_left = A[0]
-    sum_right = sum(A[2:])
+    sum_right = sum(A[P:])
     result = abs(sum_left - sum_right)
 
     # walk through whole array to find minumal difference
-    for P in range(2, size - 2):
+    for P in range(2, size):
         sum_left += A[P-1]
         sum_right -= A[P-1]
         diff = abs(sum_left - sum_right)
