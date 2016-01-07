@@ -40,7 +40,7 @@ class Tests(unittest.TestCase):
 
     def test_two_elements(self):
         """Array of two elements"""
-        self.assertEqual(3, solution([3,3]))
+        self.assertEqual(3000, solution([-2000,1000]))
 
     def test_zero_elements(self):
         """Array with five 0's"""
