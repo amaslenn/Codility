@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import time
 import unittest
 
 
@@ -53,6 +54,14 @@ class Tests(unittest.TestCase):
     def test_one_element(self):
         """Array with single element"""
         self.assertEqual(69, solution([69]))
+
+    def test_time(self):
+        """Array of 100000 elements, check time limit (0.72 sec)"""
+        array = [x for x in range(100000)]
+        s = time.time()
+        solution(array)
+        e = time.time()
+        self.assertLess(e-s, 0.72)
 
 
 if __name__ == '__main__':
