@@ -19,8 +19,8 @@ def solution(A):
 
     # walk through whole array to find minumal difference
     for P in range(2, size - 2):
-        sum_left = sum(A[0:(P-1)])
-        sum_right = sum(A[(P+1):(size-1)])
+        sum_left += A[P-1]
+        sum_right -= A[P-1]
         diff = abs(sum_left - sum_right)
         if diff < result:
             result = diff
