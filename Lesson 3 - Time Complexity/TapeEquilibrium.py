@@ -33,19 +33,19 @@ class Tests(unittest.TestCase):
     """Tests for TapeEquilibrium solution"""
     def test_from_task(self):
         """Sample array from task description"""
-        self.assertEqual(1, solution([3,1,2,4,3]))
+        self.assertEqual(1, solution([3, 1, 2, 4, 3]))
 
     def test_from_task_negative(self):
         """Sample array from task description but using negative numbers"""
-        self.assertEqual(1, solution([-3,-1,-2,-4,-3]))
+        self.assertEqual(1, solution([-3, -1, -2, -4, -3]))
 
     def test_two_elements(self):
         """Array of two elements"""
-        self.assertEqual(3000, solution([-2000,1000]))
+        self.assertEqual(3000, solution([-2000, 1000]))
 
     def test_zero_elements(self):
         """Array with five 0's"""
-        self.assertEqual(0, solution([0,0,0,0,0]))
+        self.assertEqual(0, solution([0, 0, 0, 0, 0]))
 
     def test_empty(self):
         """Empty array"""

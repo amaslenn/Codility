@@ -23,6 +23,7 @@ def solution(N):
 
     return maximum
 
+
 class Tests(unittest.TestCase):
     """Tests for BinaryGap solution"""
     def test_from_task_1041(self):
