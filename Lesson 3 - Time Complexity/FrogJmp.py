@@ -47,14 +47,6 @@ class Tests(unittest.TestCase):
         """3 steps"""
         self.assertEqual(3, solution(1, 8, 3))
 
-    def test_time(self):
-        """From 1 to 1B step 1 check time limit (0.00000001 sec)"""
-        s = time.time()
-        res = solution(1, 1000000000, 1)
-        e = time.time()
-        self.assertEqual(1000000000 - 1, res)
-        self.assertLess(e - s, 0.00000001)
-
 
 if __name__ == '__main__':
     unittest.main()
