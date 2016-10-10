@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import unittest
 
+MAX_VALUE = 100000
+
 
 def solution(A):
     only_pos = dict()
@@ -9,7 +11,7 @@ def solution(A):
             only_pos[el] = 1
 
     missing = 1
-    for i in range(1, 100000):
+    for i in range(1, MAX_VALUE + 2):
         if i not in only_pos:
             missing = i
             break
@@ -36,8 +38,8 @@ class Tests(unittest.TestCase):
 
     def test_missing_max(self):
         """Missing max pos value (max input size is 100000)"""
-        A = [i for i in range(1, 100000 - 1)]
-        self.assertEqual(100000 - 1, solution(A))
+        A = [i for i in range(1, MAX_VALUE + 1)]
+        self.assertEqual(MAX_VALUE + 1, solution(A))
 
 
 if __name__ == '__main__':
