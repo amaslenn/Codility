@@ -3,8 +3,6 @@ import unittest
 
 
 def solution(A):
-    missing = 0
-
     only_pos = dict()
     for el in A:
         if el > 0:
@@ -35,6 +33,11 @@ class Tests(unittest.TestCase):
         """All positive and equal"""
         A = [1, 1, 1, 1]
         self.assertEqual(2, solution(A))
+
+    def test_missing_max(self):
+        """Missing max pos value (max input size is 100000)"""
+        A = [i for i in range(1, 100000 - 1)]
+        self.assertEqual(100000 - 1, solution(A))
 
 
 if __name__ == '__main__':
