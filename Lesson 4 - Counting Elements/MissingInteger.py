@@ -9,7 +9,7 @@ def solution(A):
             only_pos[el] = 1
 
     missing = 1
-    for i in range(1, (2**8)**4 // 2):
+    for i in range(1, 100000):
         if i not in only_pos:
             missing = i
             break
