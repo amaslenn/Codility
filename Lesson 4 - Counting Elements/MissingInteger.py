@@ -10,7 +10,7 @@ def solution(A):
         if el > 0:
             only_pos[el] = 1
 
-    missing = 0
+    missing = 1
     for i in range(1, (2**8)**4 // 2):
         if i not in only_pos:
             missing = i
@@ -25,6 +25,16 @@ class Tests(unittest.TestCase):
         """Sample from task description"""
         A = [1, 3, 6, 4, 2, 1]
         self.assertEqual(5, solution(A))
+
+    def test_all_neg(self):
+        """All negative and 0"""
+        A = [-1, -10, 0]
+        self.assertEqual(1, solution(A))
+
+    def test_all_pos_eq(self):
+        """All positive and equal"""
+        A = [1, 1, 1, 1]
+        self.assertEqual(2, solution(A))
 
 
 if __name__ == '__main__':
