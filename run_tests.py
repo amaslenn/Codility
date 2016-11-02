@@ -32,7 +32,7 @@ for script in tests:
 
     if ret.returncode or args.verbose:
         err += ret.returncode
-        print('Tests for "{}" failed with {}.'.format(script, ret.returncode))
+        print('Tests for "{}" exited with {}.'.format(script, ret.returncode))
         print('STDOUT: {}'.format(ret.stdout))
         print('STDERR: {}'.format(ret.stderr))
 
