@@ -3,13 +3,16 @@ import unittest
 
 
 def solution(A, B, K):
-    res = 1     # 0 is mod for everyone
+    res = 0
     if B > 0:
         res = B // K
     if A > 0:
         res -= A // K
         if A % K == 0:  # keep left bound value
             res += 1
+    else:
+        res += 1    # 0 is mod for everyone
+
     return res
 
 
@@ -46,6 +49,10 @@ class Tests(unittest.TestCase):
     def test_zero(self):
         """Zero is mod for anyone"""
         self.assertEqual(1, solution(0, 0, 7))
+
+    def test_fail2(self):
+        """Data from failing case after 2d submit"""
+        self.assertEqual(8, solution(0, 14, 2))
 
 
 if __name__ == '__main__':
