@@ -11,8 +11,6 @@ def solution(A):
         else:
             num_passing_cars += num_heading_east
 
-    # since size of A can't be greater than 100000, following condition is always false,
-    # but it mention in task
     if num_passing_cars > 1000000000:
         num_passing_cars = -1
 
