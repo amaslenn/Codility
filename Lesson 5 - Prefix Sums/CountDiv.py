@@ -3,13 +3,13 @@ import unittest
 
 
 def solution(A, B, K):
-    res = (B - A) // K
-
-    if A % K == 0:
-        res += 1
-    if A + res * K < B and B % K == 0:
-        res += 1
-
+    res = 1     # 0 is mod for everyone
+    if B > 0:
+        res = B // K
+    if A > 0:
+        res -= A // K
+        if A % K == 0:  # keep left bound value
+            res += 1
     return res
 
 
@@ -39,6 +39,14 @@ class Tests(unittest.TestCase):
         """Both min and max are divisible, range is not empty"""
         self.assertEqual(4, solution(6, 12, 2))
 
+    def test_fail1(self):
+        """Data from failing case after 1st submit"""
+        self.assertEqual(20, solution(11, 345, 17))
+
+    def test_zero(self):
+        """Zero is mod for anyone"""
+        self.assertEqual(1, solution(0, 0, 7))
+
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(failfast=True)
