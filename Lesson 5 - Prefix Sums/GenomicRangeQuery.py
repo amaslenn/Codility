@@ -17,9 +17,9 @@ def solution(S, P, Q):
 
     N = len(array)
     # construct sparse table
-    ST = [0 for i in range(0, N)]
+    ST = [0] * N
     for i, el in enumerate(array):
-        ST[i] = [0 for _ in range(0, N)]
+        ST[i] = [0] * N
         ST[i][0] = el
     k = 1
     while (1 << k) <= N:
