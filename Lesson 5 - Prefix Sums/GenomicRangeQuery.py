@@ -22,7 +22,7 @@ def solution(S, P, Q):
         ST[i] = [0 for _ in range(0, N)]
         ST[i][0] = el
     k = 1
-    while (1 << k) < N:
+    while (1 << k) <= N:
         for i in range(0, N - (1 << k) + 1):
             ST[i][k] = min(ST[i][k-1], ST[i + (1 << (k - 1))][k-1])
         k += 1
@@ -44,6 +44,10 @@ class Tests(unittest.TestCase):
     def test_from_task(self):
         """Sample from task description"""
         self.assertEqual([2, 4, 1], solution('CAGCCTA', [2, 5, 0], [4, 5, 6]))
+
+    def test_fail1(self):
+        """Failing sample from first submit"""
+        self.assertEqual([1, 1, 2], solution('AC', [0, 0, 1], [0, 1, 1]))
 
 
 if __name__ == '__main__':
