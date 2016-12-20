@@ -17,3 +17,5 @@ My solutions for [Codility](https://codility.com/programmers/lessons) lessons.
 |Lesson 4. PermCheck | 100% | 100%|
 |Lesson 5. CountDiv | 100% | 100%|
 |Lesson 5. PassingCars | 100% | 100%|
+|Lesson 5. GenomicRangeQuery | 100% | 0%|
+
