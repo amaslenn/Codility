@@ -3,7 +3,7 @@
 My solutions for [Codility](https://codility.com/programmers/lessons) lessons.
 
 ## Results for **Python** implementations.
-|Task|Correctness|Permonace|
+|Task|Correctness|Perfomance|
 |:---|       ---:|     ---:|
 |Lesson 1. BinaryGap | 100% | 100%|
 |Lesson 2. CyclicRotation | 100% | 100%|
