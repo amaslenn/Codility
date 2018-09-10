@@ -2,7 +2,7 @@
 - **Description**: basic data structure, stored in one memory block.
 - **Creation**: O(N)
 - **Search**: O(N)
-- **Insert**: O(N) (can be improved to O(1) by managing capacity = Nx2)
+- **Insert**: O(N) (can be improved to O(1) by managing `capacity = Nx2`)
 - **Delete**: O(N)
 
 ## List
@@ -13,7 +13,7 @@
 - **Delete**: O(N) (O(1) if position is known)
 
 ## Stack (LIFO)
-- **Description**: structure with two operations: push() and pop()
+- **Description**: structure with two operations: `push()` and `pop()`
 - **Creation**: O(N)
 - **Search**: n/a
 - **Insert/push**: O(1)
@@ -42,7 +42,7 @@
 
 
 # Summary
-|Task|Creation|Search|Insert|Delete|
+|Structure|Creation|Search|Insert|Delete|
 |:---|    ---:|  ---:|  ---:|  ---:|
 |Array|O(N)   |O(N)  |  O(N)|  O(N)|
 |Stack|O(N)   |n/a   |  O(1)|  O(1)|
