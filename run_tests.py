@@ -18,13 +18,10 @@ for f in root_content:
         continue
 
     dir_content = listdir(f)
-    py = None
     for item in dir_content:
         if item.endswith('.py'):
             py = os.path.join(f, item)
-            break
-
-    tests.append(py)
+            tests.append(py)
 
 err = 0
 for script in tests:
