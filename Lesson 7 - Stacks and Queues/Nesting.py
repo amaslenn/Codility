@@ -4,6 +4,9 @@ import unittest
 def solution(S):
     res = 1
 
+    if not S:
+        return res
+
     stack = [S[0]]
 
     for s in S[1:]:
@@ -45,6 +48,10 @@ class Tests(unittest.TestCase):
     def test_several(self):
         """Check (())()"""
         self.assertEqual(1, solution("(())()"))
+
+    def test_empty(self):
+        """Check an empty input"""
+        self.assertEqual(1, solution(""))
 
 
 if __name__ == '__main__':
