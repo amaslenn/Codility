@@ -2,24 +2,26 @@
 import unittest
 
 def solution(H):
-    nblocks = 0
-
-    blocks = set()
-    curr_min = H[0]
+    nblocks, blocks = 0, []
     for h in H:
-        if not blocks or h >= curr_min:
-            curr_min = min(curr_min, h)
-            blocks.add(h)
+        if not blocks or h >= blocks[-1]:
+            blocks.append(h)
             continue
 
-        nblocks += len(blocks)
+        b = blocks[-1]
+        tmp = set()
+        while b > h:
+            tmp.add(b)
+            blocks.pop()
+            if not blocks:
+                break
+            b = blocks[-1]
 
-        blocks.clear()
-        blocks.add(h)
-        curr_min = h
+        blocks.append(h)
+        nblocks += len(tmp)
 
-    if blocks:
-        nblocks += len(blocks)
+    tmp = set(blocks)
+    nblocks += len(tmp)
 
     return nblocks
 
@@ -37,6 +39,10 @@ class Tests(unittest.TestCase):
     def test_all_different(self):
         """Lower and lower"""
         self.assertEqual(4, solution([8, 7, 6, 5]))
+
+    def test_all_different(self):
+        """Saw"""
+        self.assertEqual(3, solution([1, 2, 1, 2]))
 
 
 if __name__ == '__main__':
