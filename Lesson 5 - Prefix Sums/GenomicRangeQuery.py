@@ -32,7 +32,7 @@ def solution(S, P, Q):
     for i in range(0, len(P)):
         left = P[i]
         right = Q[i]
-        mid = floor(log(right - left + 1, 2))
+        mid = int(floor(log(right - left + 1, 2)))
 
         res.append(min(ST[left][mid], ST[right - (1 << mid) + 1][mid]))
 
