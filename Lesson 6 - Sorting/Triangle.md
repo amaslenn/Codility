@@ -1,4 +1,4 @@
-An array `A` consisting of `N` integers is given. A triplet `(P, Q, R)`` is triangular if `0 ≤ P < Q < R < N` and:
+An array `A` consisting of `N` integers is given. A triplet `(P, Q, R)` is triangular if `0 ≤ P < Q < R < N` and:
 ```
 A[P] + A[Q] > A[R],
 A[Q] + A[R] > A[P],
@@ -15,7 +15,7 @@ Write a function:
 ```c
 int solution(int A[], int N);
 ```
-that, given an array `A` consisting of `N` integers, returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+that, given an array `A` consisting of `N` integers, returns `1` if there exists a triangular triplet for this array and returns `0` otherwise.
 
 For example, given array `A` such that:
 ```
