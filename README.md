@@ -23,3 +23,4 @@ My solutions for [Codility](https://codility.com/programmers/lessons) lessons.
 |Lesson 7. Fish | 100% | 100%|
 |Lesson 7. Brackets | 100% | 100%|
 |Lesson 7. StoneWall | 100% | 100%|
+|Lesson 8. EquiLeader | 100% | 100%|
