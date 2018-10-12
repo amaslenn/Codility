@@ -18,27 +18,41 @@
 - **Search**: n/a
 - **Insert/push**: O(1)
 - **Delete/pop**: O(1)
+Base implementation is array-based.
+
+## Queue (FIFO)
+- **Description**: structure with two operations: `enqueue()` and `dequeue()`
+- **Creation**: O(N)
+- **Search**: n/a
+- **Insert/enqueue**: O(1)
+- **Delete/dequeue**: O(1)
+Base implementation is list-based. Can be also implemented using two stacks.
 
 ## Heap
-- **Description**:
-- **Creation**:
-- **Search**:
-- **Insert**:
-- **Delete**:
+- **Description**: structure with `insert()`, `getmin()` and `extractmin()` operations
+- **Creation**: O(log(N))
+- **Search**: n/a
+- **Insert**: O(log(N))
+- **Delete**: n/a
+- **getmin**: O(1)
+- **extractmin**: O(log(N))
+Min-heap is based on binary tree, root contains minimum (implementattion is
+array-based).
 
 ## Binary search tree
-- **Description**:
-- **Creation**:
-- **Search**:
-- **Insert**:
-- **Delete**:
+- **Description**: binary tree with left son always < right son.
+- **Creation**: O(Nlog(N))
+- **Search**: O(log(N))
+- **Insert**: O(log(N))
+- **Delete**: O(log(N))
+Complexity is for balanced tree. Implementation is list-based.
 
 ## Hash
 - **Description**:
-- **Creation**:
-- **Search**:
-- **Insert**:
-- **Delete**:
+- **Creation**: O(N)
+- **Search**: O(1)
+- **Insert**: O(1)
+- **Delete**: O(1)
 
 
 # Summary
