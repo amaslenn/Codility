@@ -18,6 +18,7 @@ My solutions for [Codility](https://codility.com/programmers/lessons) lessons.
 |Lesson 5. CountDiv | 100% | 100%|
 |Lesson 5. PassingCars | 100% | 100%|
 |Lesson 5. GenomicRangeQuery | 100% | 0%|
+|Lesson 5. MinAvgTwoSloce | 100% | 20%|
 |Lesson 6. Triangle | 100% | 100%|
 |Lesson 6. MaxProductOfThree | 100% | 100%|
 |Lesson 7. Fish | 100% | 100%|
