@@ -13,7 +13,7 @@ def solution(A):
             slice_sum = prefix_sums[ind]
             if ind - size >= 0:
                 slice_sum -= prefix_sums[ind - size]
-            # print(">> size={}; min_indexd={}; s={}".format(size, ind, slice_sum))
+            # print(">> size={}; min_index={}; s={}".format(size, ind, slice_sum))
 
             avg = slice_sum / size
             # print("   avg={}; min_avg={}".format(avg, min_avg))
@@ -31,9 +31,13 @@ class Tests(unittest.TestCase):
         """Sample from task description"""
         self.assertEqual(1, solution([4, 2, 2, 5, 1, 5, 8]))
 
-    def test_min1(self):
-        """With negative numbers"""
+    def test_negative(self):
+        """Negative avg"""
         self.assertEqual(2, solution([-4, 1, 1, -10]))
+
+    def test_slice_size3(self):
+        """Min avg in slice size=3"""
+        self.assertEqual(2, solution([2, 2, -1, 2, -1]))
 
 
 if __name__ == '__main__':
