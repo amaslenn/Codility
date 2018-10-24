@@ -26,3 +26,4 @@ My solutions for [Codility](https://codility.com/programmers/lessons) lessons.
 |Lesson 8. EquiLeader | 100% | 100%|
 |Lesson 9. MaxSliceSum | 100% | 100%|
 |Lesson 9. MaxProfit | 100% | 100%|
+|Lesson 10. CountFactors | 100% | 100%|
