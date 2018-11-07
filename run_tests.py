@@ -33,4 +33,23 @@ for script in tests:
         print('STDOUT: {}'.format(ret.stdout))
         print('STDERR: {}'.format(ret.stderr))
 
+with open("README.md", "r") as f:
+    tests_in_readme = set()
+    for line in f:
+        if "Lesson" in line and "%" in line:
+            test = line.split()[2]
+            tests_in_readme.add(test)
+
+    real_tests = set()
+    for t in tests:
+        name = os.path.splitext(os.path.basename(t))[0]
+        real_tests.add(name)
+
+
+    sym_diff = real_tests ^ tests_in_readme
+    if sym_diff:
+        print("Tests not added to README:", real_tests - tests_in_readme)
+        print("Non existing tests in README:", tests_in_readme - real_tests)
+        err += 1
+
 exit(err)
