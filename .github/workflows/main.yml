@@ -2,12 +2,12 @@ name: Run all tests
 on: [push]
 
 jobs:
-  strategy:
-    matrix:
-      os: [macOS-latest, windows-latest, ubuntu-latest]
-
   build:
     runs-on: {{ matrix.os }}
+    strategy:
+      max-parallel: 4
+      matrix:
+        os: [macOS-latest, windows-latest, ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v1
